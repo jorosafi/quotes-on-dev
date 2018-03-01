@@ -52,7 +52,6 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 main,
 menu,
@@ -230,7 +229,8 @@ input,
 select,
 textarea {
   font-family: "Exo Web", sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-size: 16px; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -280,23 +280,23 @@ big {
 
 body {
   background: #222222;
-  color: white; }
+  color: white;
+  padding: 0 20px; }
+  @media (min-width: 1080px) {
+    body {
+      padding: 0 40px; } }
+  body .site {
+    margin: 0 auto; }
+    @media (min-width: 620px) {
+      body .site {
+        width: 620px; } }
+    @media (min-width: 1080px) {
+      body .site {
+        width: 1080px; } }
 
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 1rem; }
-
-*,
-*:before,
-*:after {
-  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit; }
-
 blockquote, q {
   quotes: "" ""; }
   blockquote:before, blockquote:after, q:before, q:after {
@@ -308,31 +308,11 @@ hr {
   height: 1px;
   margin-bottom: 1.5rem; }
 
-ul, ol {
-  margin: 0 0 1.5rem 3rem; }
-
-ul {
-  list-style: disc; }
-
-ol {
-  list-style: decimal; }
-
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5rem; }
-
 dt {
   font-weight: bold; }
 
 dd {
   margin: 0 1.5rem 1.5rem; }
-
-img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */ }
 
 table {
   margin: 0 0 1.5rem;
@@ -405,7 +385,7 @@ textarea {
   width: 100%; }
 
 .site-header {
-  padding: 40px 20px 30px 20px; }
+  padding: 40px 20px 30px 0; }
   .site-header img {
     width: 300px; }
   @media (min-width: 620px) {
@@ -604,3 +584,65 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
+.site-footer .site-info {
+  padding: 20px; }
+  .site-footer .site-info .menu {
+    width: 320px; }
+    .site-footer .site-info .menu ul {
+      margin: 0px;
+      padding: 0px;
+      list-style-type: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .site-footer .site-info .menu ul li {
+        margin: 0;
+        padding-right: 20px; }
+        .site-footer .site-info .menu ul li a {
+          color: #00cc00;
+          text-decoration: none; }
+      .site-footer .site-info .menu ul li:first-child {
+        border-right: 1px solid #ffffff; }
+      .site-footer .site-info .menu ul li:nth-child(2) {
+        border-right: 1px solid #ffffff; }
+  .site-footer .site-info p {
+    padding: 15px 0; }
+    .site-footer .site-info p a {
+      text-decoration: none;
+      color: #00cc00; }
+
+@media (min-width: 620px) {
+  .site-footer .site-info {
+    width: 600px;
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .site-footer .site-info .menu {
+      width: auto; }
+      .site-footer .site-info .menu ul li {
+        padding: 0 20px;
+        border-right: 1px solid #ffffff; }
+      .site-footer .site-info .menu ul li:first-child {
+        padding-left: 0; }
+    .site-footer .site-info p {
+      padding: 0; } }
+
+@media (min-width: 1080px) {
+  .site-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; } }

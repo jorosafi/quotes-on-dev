@@ -5,4 +5,17 @@
 body{
   background: $color__background;
   color: white;
+  padding: 0 20px;
+  @include desktop{
+    padding: 0 40px;
+  }
+  .site{
+    margin: 0 auto;
+    @include tablet{
+      width: 620px;
+    }
+    @include desktop{
+      width: 1080px;
+    }
+  }
 }

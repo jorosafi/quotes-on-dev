@@ -20,7 +20,7 @@
 						)
 					); ?>
 					
-					<p>Brought to you by © <a href="https://github.com/jorosafi">Rodrigo Samayoa</a> <?php echo date('Y') ?> </p>
+					<p>Brought to you by © <a href="https://github.com/jorosafi">Rodrigo SF</a> <?php echo date('Y') ?> </p>
 
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->

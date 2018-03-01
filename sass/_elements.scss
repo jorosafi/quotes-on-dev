@@ -2,16 +2,6 @@
 # Elements
 --------------------------------------------------------------*/
 
-html {
-	box-sizing: border-box;
-	font-size: 1rem;
-}
-
-*,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
-}
 
 // body {
 // 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
@@ -33,23 +23,6 @@ hr {
 	margin-bottom: $base__space-unit;
 }
 
-ul, ol {
-	margin: 0 0 $base__space-unit ($base__space-unit * 2);
-}
-
-ul {
-	list-style: disc;
-}
-
-ol {
-	list-style: decimal;
-}
-
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: $base__space-unit;
-}
 
 dt {
 	font-weight: bold;
@@ -57,11 +30,6 @@ dt {
 
 dd {
 	margin: 0 $base__space-unit $base__space-unit;
-}
-
-img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
 }
 
 table {
