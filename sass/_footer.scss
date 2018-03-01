@@ -13,6 +13,7 @@
         li{
           margin: 0;
           padding-right: 20px;
+          font-family: $font__light;
           a{
             color: $color__brand-green;
             text-decoration: none;
@@ -28,9 +29,11 @@
     }
     p{
       padding: 15px 0;
+      font-family: $font__light;
       a{
         text-decoration: none;
         color: $color__brand-green;
+        font-family: $font__light
       }
     }
   }
