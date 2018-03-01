@@ -1,9 +1,9 @@
 /*!
-Theme Name: Quotes on Dev Starter Theme
+Theme Name: Quotes on Dev Theme
 Theme URI: http://underscores.me/
-Author: RED Academy
+Author: Rodrigo Samayoa
 Author URI: http://www.redacademy.com
-Description: A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+Description: A WordPress theme for the Quotes on Dev project, forked from Underscores.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -229,9 +229,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
-  font-size: 1rem;
+  font-family: "Exo Web", sans-serif;
   line-height: 1.5; }
 
 /* Headings */
@@ -240,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Copy */
 p {
-  margin-bottom: 1.5rem; }
+  margin: 0; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -276,6 +274,14 @@ mark, ins {
 big {
   font-size: 125%; }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  background: #222222;
+  color: white; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -290,10 +296,6 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
-
-body {
-  background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
   quotes: "" ""; }
@@ -401,6 +403,19 @@ input[type="search"] {
 textarea {
   padding-left: 3px;
   width: 100%; }
+
+.site-header {
+  padding: 40px 20px 30px 20px; }
+  .site-header img {
+    width: 300px; }
+  @media (min-width: 620px) {
+    .site-header img {
+      width: 500px; } }
+  @media (min-width: 1080px) {
+    .site-header {
+      text-align: center; }
+      .site-header img {
+        width: 700px; } }
 
 /*--------------------------------------------------------------
 # Navigation

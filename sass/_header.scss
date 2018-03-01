@@ -1,0 +1,17 @@
+.site-header{
+  padding: 40px 20px 30px 20px;
+  img{
+    width: 300px;
+  }
+  @include tablet{
+    img{
+      width: 500px;
+    }
+  }
+  @include desktop{
+    img{
+      width: 700px;
+    }
+    text-align: center;
+  }
+}
