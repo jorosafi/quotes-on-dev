@@ -393,24 +393,19 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+  border: 3px solid #00cc00;
   border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: .75rem;
+  background: none;
+  color: #00cc00;
+  font-size: 1rem;
   line-height: 1;
   padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  margin: 10px 0; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+    border-color: white; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -429,8 +424,8 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
+  color: white;
+  border: 3px solid #00cc00;
   border-radius: 3px; }
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -438,18 +433,28 @@ textarea {
   input[type="password"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    color: #111; }
+    color: white;
+    border: 3px solid white;
+    outline: 0; }
 
 input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-  padding: 3px; }
+  padding: 3px;
+  background: none; }
 
 textarea {
   padding-left: 3px;
-  width: 100%; }
+  width: 100%;
+  background: none; }
+
+label {
+  display: block; }
+
+.quote-submission-wrapper div {
+  margin: 10px 0; }
 
 .site-header {
   padding: 40px 20px 30px 0; }
