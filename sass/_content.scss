@@ -25,7 +25,8 @@
 			position: absolute;
 			font-size: 125px;
 			left: -170px;
-			top: 0
+			top: 0;
+			color: $color__brand-green;
 		}
 		&::after{
 			content: "\f10e";
@@ -34,6 +35,7 @@
 			font-size: 125px;
 			right: -170px;
 			top: 0;
+			color: $color__brand-green;
 		}
 	}
 }
