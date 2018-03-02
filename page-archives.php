@@ -37,7 +37,7 @@ get_header(); ?>
           </ul>
         </div>
 
-        <div class="tags-archiges">
+        <div class="tags-archives">
           <h2>Tags</h2>
           <?php wp_tag_cloud(array(
             'smallest' => 1,

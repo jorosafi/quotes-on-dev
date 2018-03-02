@@ -7,7 +7,7 @@ button,
 input,
 select,
 textarea {
-	font-family: $font__main;
+	font-family: $font__light;
 	line-height: $font__line-height-body;
 	font-size: 16px;
 }
@@ -18,10 +18,27 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
+h1{
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+h2{
+	font-size: 1.5rem;
+}
+
 /* Copy */
 
 p {
 	margin: 0;
+}
+
+a{
+	text-decoration: none;
+	color: $color__brand-green;
+	&:hover{
+		color: darken($color__brand-green, 10%);
+	}
 }
 
 dfn, cite, em, i {
@@ -64,4 +81,45 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+//Page-specific font styling
+	//home page
+		.home{
+			.site-content{
+				p{
+					font-size: 1.25rem;
+				}
+				.entry-title{
+					font-size: 1.25rem;
+					font-family: $font__light;
+				}
+				.source{
+					font-size: 1.25rem;
+					font-style: italic;
+				}
+				@include tablet{
+					p{
+						font-size: 1.75rem;
+					}
+					button{
+						font-size: 1.25rem;
+					}
+				}
+				@include desktop{
+					p{
+						font-size: 2.5rem;
+					}
+				}
+			}
+		}
+
+.browse-archives{
+	@include tablet{
+			li{
+				a{
+					font-size: 1.25rem;
+				}
+			}
+		}
 }

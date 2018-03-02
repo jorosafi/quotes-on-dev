@@ -4,14 +4,6 @@
 
 /* Posts and pages */
 
-.sticky {
-	display: block;
-}
-
-.hentry {
-	margin: 0 0 $base__space-unit;
-}
-
 .updated:not(.published){
 	display: none;
 }
@@ -21,13 +13,28 @@
 	display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: $base__space-unit 0 0;
+//Quotes content
+.site-content{
+	position: relative;
+	@include desktop{
+		width: 650px;
+		margin: 0 auto;
+		&::before{
+			content: "\f10d";
+			font-family: FontAwesome;
+			position: absolute;
+			font-size: 125px;
+			left: -170px;
+			top: 0
+		}
+		&::after{
+			content: "\f10e";
+			font-family: FontAwesome;
+			position: absolute;
+			font-size: 125px;
+			right: -170px;
+			top: 0;
+		}
+	}
 }
 
-.page-links {
-	clear: both;
-	margin: 0 0 $base__space-unit;
-}
