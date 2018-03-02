@@ -405,7 +405,8 @@ input[type="submit"] {
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    border-color: white; }
+    border-color: green;
+    color: green; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -413,7 +414,9 @@ input[type="submit"] {
   input[type="reset"]:focus,
   input[type="submit"]:active,
   input[type="submit"]:focus {
-    border-color: white; }
+    border-color: green;
+    color: green;
+    outline: none; }
 
 /* Fields */
 input[type="text"],

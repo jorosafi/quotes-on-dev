@@ -18,12 +18,15 @@ input[type="submit"] {
 	margin: 10px 0;
 
 	&:hover {
-		border-color: white;
+		border-color: darken($color__brand-green, 15%);
+		color: darken($color__brand-green, 15%);
 	}
 
 	&:active,
 	&:focus {
-		border-color: white;
+		border-color: darken($color__brand-green, 15%);
+		color: darken($color__brand-green, 15%);
+		outline: none;
 	}
 }
 
