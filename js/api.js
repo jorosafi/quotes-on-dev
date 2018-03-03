@@ -17,11 +17,14 @@
       }).done(function (response) {
 
         var respData = response[0];
+
+        // console.log(respData);
         var postAuthor = respData.title.rendered;
         var postContent = respData.content.rendered;
         var postSource = respData._qod_quote_source;
         var postSourceURL = respData._qod_quote_source_url;
         var postID = respData.id;
+        var lastPage = '';
 
         var html = '<article id="post-';
         html += postID;
@@ -44,35 +47,63 @@
         
         html +='</div><!-- .entry-meta --> </article><!-- #post-## -->';
 
+          // console.log(postURL);
           $('.quote-button').before(html);
-          history.pushState(null, null, postAuthor);
+
+          // var postHash = '#'+postAuthor;
+          var postURL = respData.slug;
+
+          history.pushState(null, null, postURL);
+
+          $(window).on('popstate', function() {
+            console.log("popstate fired!");
+            if (window.location.hash.indexOf('qm-overview') === 1) {
+              return false;
+            }else {
+              window.location.replace(lastPage);
+            }
+          });
 
       });//end Done
 
     }); //end quote-button click function
 
 
-    // $('#submit-quote').click(function(e){
-    //   e.preventDefault();
+    $('#submit-quote').click(function(e){
+      e.preventDefault();
 
-    //   $.ajax({
-    //     method: 'post',
-    //     url: redsprout_vars.rest_url + 'wp/v2/posts/',
-    //     data: {
-    //         title: author,
-    //         content: content,
-    //         _qod_source: quoteSource,
-    //     },
-    //     beforeSend: function (xhr) {
-    //         xhr.setRequestHeader('X-WP-Nonce', redsprout_vars.wpapi_nonce);
-    //     }
-    // }).done(function (response) {
-    //     $('.comment-status').empty();
-    //     $('#close-comments').after('<p class="comment-status">Comments are now ' + commentStatus + ' for this post.</p>');
-    // });
+      var author = $('#quote-author').val();
+      var quote = $('#quote-content').val();
+      var quoteSource = $('#quote-source').val();
+      var quoteSourceURL = $('#quote-source-url').val();
+
+      // console.log(author);
+      // console.log(quote);
+      // console.log(quoteSource);
+      // console.log(quoteSourceURL);
+      $.ajax({
+        method: 'post',
+        url: api_vars.root_url + 'wp/v2/posts/',
+        data: {
+            title: author, 
+            content: quote,
+            _qod_quote_source: quoteSource,
+            _qod_quote_source_url: quoteSourceURL,
+            status: 'publish'
+        },
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('X-WP-Nonce', api_vars.nonce);
+        }
+    }).done(function () {
+      var submissionComplete = '<h1> </h1>'
+      $('#quote-submission-form').empty();
+      $('.submit-success-message').append('Thanks! Your quote submission has been received.').toggle();
+      
+
+    });
 
 
-    // });// submit-quote 
+    });// submit-quote 
 
 
   }); // end doc ready
