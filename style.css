@@ -673,6 +673,31 @@ iframe,
 object {
   max-width: 100%; }
 
+.search-results .page-title {
+  border-bottom: 1px dotted #fff;
+  padding-bottom: 20px; }
+
+.search-results .number-pagination {
+  margin: 40px 0; }
+
+.archive .site-content {
+  margin-bottom: 50px; }
+  .archive .site-content .page-title {
+    border-bottom: 1px dotted #fff;
+    padding-bottom: 20px;
+    margin-bottom: 0; }
+  .archive .site-content article {
+    border-bottom: 1px dotted #fff;
+    padding: 30px 0 10px 0; }
+    .archive .site-content article h2 {
+      display: inline-block; }
+    .archive .site-content article p {
+      font-size: 1.25rem; }
+    .archive .site-content article a {
+      font-size: 1.25rem;
+      font-style: italic;
+      padding: 0 10px; }
+
 .post-archives ul, .category-archives ul, .tags-archives ul {
   padding: 0;
   list-style-type: none;
@@ -696,7 +721,7 @@ object {
 /* All Archives Page */
 /* Submit a Quote Page */
 .site-footer .site-info {
-  padding: 20px; }
+  padding: 20px 0; }
   .site-footer .site-info .menu {
     width: 320px; }
     .site-footer .site-info .menu ul {
