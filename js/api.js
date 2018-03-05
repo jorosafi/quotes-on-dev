@@ -89,13 +89,12 @@
             content: quote,
             _qod_quote_source: quoteSource,
             _qod_quote_source_url: quoteSourceURL,
-            status: 'publish'
+            status: 'pending'
         },
         beforeSend: function (xhr) {
             xhr.setRequestHeader('X-WP-Nonce', api_vars.nonce);
         }
     }).done(function () {
-      var submissionComplete = '<h1> </h1>'
       $('#quote-submission-form').empty();
       $('.submit-success-message').append('Thanks! Your quote submission has been received.').toggle();
       
