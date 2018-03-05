@@ -1,6 +1,8 @@
-# Quotes on Dev Starter
+# Quotes on Dev
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+Quotes on Dev, my fifth project with the Red Academy, is a website inspired by Chris Coyier's [Quotes on Design](https://quotesondesign.com/) website. It uses the Wordpress rest API to fetch random quotes from the WP database and post them on the front page and submit new ones through the submit-a-quote page. 
+
+![Home Page Screenshot](images/home-page.png)
 
 ## Installation
 
