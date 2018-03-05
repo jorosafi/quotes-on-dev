@@ -2,10 +2,6 @@
 
   jQuery(document).ready(function(){
 
-  //history api, history.pushState() -- also look into the popState
-  // submit a new quote with the form using ajax
-
-
     $('.quote-button').click(function(){
       $('article').remove();
 
@@ -17,8 +13,6 @@
       }).done(function (response) {
 
         var respData = response[0];
-
-        // console.log(respData);
         var postAuthor = respData.title.rendered;
         var postContent = respData.content.rendered;
         var postSource = respData._qod_quote_source;
@@ -47,16 +41,14 @@
         
         html +='</div><!-- .entry-meta --> </article><!-- #post-## -->';
 
-          // console.log(postURL);
           $('.quote-button').before(html);
 
-          // var postHash = '#'+postAuthor;
           var postURL = respData.slug;
 
           history.pushState(null, null, postURL);
 
+          //used to save the history of the random quotes to be able to press back and forward
           $(window).on('popstate', function() {
-            console.log("popstate fired!");
             if (window.location.hash.indexOf('qm-overview') === 1) {
               return false;
             }else {
@@ -77,10 +69,6 @@
       var quoteSource = $('#quote-source').val();
       var quoteSourceURL = $('#quote-source-url').val();
 
-      // console.log(author);
-      // console.log(quote);
-      // console.log(quoteSource);
-      // console.log(quoteSourceURL);
       $.ajax({
         method: 'post',
         url: api_vars.root_url + 'wp/v2/posts/',

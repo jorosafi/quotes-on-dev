@@ -114,12 +114,12 @@ big {
 			}
 		}
 
-.browse-archives{
-	@include tablet{
-			li{
-				a{
-					font-size: 1.25rem;
+	.browse-archives{
+		@include tablet{
+				li{
+					a{
+						font-size: 1.25rem;
+					}
 				}
 			}
 		}
-}

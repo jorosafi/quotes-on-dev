@@ -2,7 +2,7 @@
 /**
  * The main template file.
  *
- * @package Quotes-on-Dev_Theme
+ * @package QOD-Theme
  */
 
 get_header(); ?>
