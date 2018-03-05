@@ -73,3 +73,35 @@ label{
 		margin: 10px 0;
 	}
 }
+
+//Special styling for search bar
+.search-form{
+	border: none;
+	fieldset{
+		border:none;
+		padding: 0;
+		margin: 20px 0;
+		position: relative;
+		label{
+			width: 260px;
+			input{
+				width: 100%;
+			}
+		}
+		.search-submit{
+			border:none;
+			margin: 0;
+			position: absolute;
+			padding: 0;
+			top: 8px;
+			left: 285px;
+			.icon-search{
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+
+
+

@@ -457,6 +457,27 @@ label {
 .quote-submission-wrapper div {
   margin: 10px 0; }
 
+.search-form {
+  border: none; }
+  .search-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 20px 0;
+    position: relative; }
+    .search-form fieldset label {
+      width: 260px; }
+      .search-form fieldset label input {
+        width: 100%; }
+    .search-form fieldset .search-submit {
+      border: none;
+      margin: 0;
+      position: absolute;
+      padding: 0;
+      top: 8px;
+      left: 285px; }
+      .search-form fieldset .search-submit .icon-search {
+        font-size: 1.2rem; }
+
 .site-header {
   padding: 40px 20px 30px 0; }
   .site-header img {
